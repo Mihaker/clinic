@@ -1,0 +1,16 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col'>
+      <p>Номер: <%= @user.phone %></p>
+      <p>Ім`я: <%= @user.first_name %></p>
+      <p>Фамилія: <%= @user.last_name %></p>
+      <p>e-mail: <%= @user.email %></p>
+      <p><%= link_to 'Edit private office', edit_user_registration_path%></p>
+
+      <%= link_to "Back", :back %>
+    </div>
+    <div class='col'>
+      <h1>Тут буде списсок всих лікарів</h1>
+    </div>
+  </div>
+</div>
