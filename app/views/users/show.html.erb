@@ -10,7 +10,20 @@
       <%= link_to "Back", :back %>
     </div>
     <div class='col'>
-      <h1>Тут буде списсок всих лікарів</h1>
+      <h1>Наші лікарі</h1>
+      <hr>
+      <%= form_with url: user_path(@user), method: :get do |form| %>
+        <%= form.label :category_id, "Знайти лікаря:" %>
+        <%= form.collection_select :category_id, Category.all, :id, :name %>
+        <%= form.submit "Пошук" %>
+      <% end %>
+      <hr>
+      <% @doctors.each do |doc| %>
+        <p> <%= doc.full_name %> |
+          <%= doc.category.name %>
+        </p>
+      <% end %>
+
     </div>
   </div>
 </div>

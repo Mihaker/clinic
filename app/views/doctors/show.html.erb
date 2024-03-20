@@ -1,0 +1,16 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col'>
+      <p>Ім`я: <%= @doctor.first_name %></p>
+      <p>Фамилія: <%= @doctor.last_name %></p>
+      <p>e-mail: <%= @doctor.email %></p>
+      <p>Спеціальніть: <%= @doctor.category.name %></p>
+      <p><%= link_to 'Edit private office', edit_doctor_registration_path%></p>
+
+      <%= link_to "Back", :back %>
+    </div>
+    <div class='col'>
+      <h1>Тут буде список всих записів на сьогодні.</h1>
+    </div>
+  </div>
+</div>
